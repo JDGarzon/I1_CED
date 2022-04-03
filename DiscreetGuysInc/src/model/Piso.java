@@ -23,15 +23,17 @@ public class Piso {
 	
 	
 	
-	public void addPersonas(Persona personas) {
+	public void addPersonas(Persona persona) {
 		for(int i=0;i<oficinas.length;i++) {
 	
 			if(oficinas[i].isEmpty()) {
-				oficinas[i].setPersona(personas);
-				break;
+				oficinas[i].setPersona(persona);
+				return;
+				
 			}
 			
 		}
+		pasillo.push(persona);
 	}
 	
 	public Ascensor getAscensor() {
